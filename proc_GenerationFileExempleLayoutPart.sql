@@ -41,7 +41,7 @@ insert @FileG
 SELECT      
     0,      
  0,      
- 'H' +                     -- ìHî ñ Header (fix value)      
+ 'H' +                     -- ‚ÄúH‚Äù ‚Äì Header (fix value)      
  'VENDAS     ' +                         
  'COMPANY TRILALA               ' +            
  format(@SysDateGeneretion, 'ddMMyyyy') +
@@ -87,7 +87,7 @@ where
         and a.tp_StatusTransference = 1 and a.tp_StatusInsurenceSeguro = 1)      
   and ((      
     (select min(no_billing)      
-    from Parcela_Seguro      
+    from Billing      
     where id_ContractInsurence = a.id_ContractInsurence      
       and tp_StatusInsurence = 2) = ps.no_billing      
    AND (p.cd_ProductInsurence = '9981')) 
